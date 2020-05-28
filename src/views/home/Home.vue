@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div id="home" class="all-mian-content">
     <h2>Home {{message}}</h2>
   </div>
 </template>
@@ -20,11 +20,5 @@
 </script>
 
 <style scoped>
-  #home {
-    background-color: deeppink;
-    position: absolute;
-    left: 24%;
-    right: 6%;
-    height: 900px;
-  }
+
 </style>
