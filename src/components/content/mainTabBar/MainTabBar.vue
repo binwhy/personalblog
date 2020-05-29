@@ -7,7 +7,7 @@
     <div slot="center" class="tab-bar-center">
       <div class="profile-info">
         <img src="~assets/img/mainTabBar/my-love.jpg" alt="">
-        <span class="name">binwhy2dm</span>
+        <span class="name">Baymax2dm</span>
         <span class="sign">生活，就是求知</span>
       </div>
       <main-nav-bar/>

@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="all-mian-content">
+  <div id="home" class="all-main-content">
     <h2>Home {{message}}</h2>
   </div>
 </template>

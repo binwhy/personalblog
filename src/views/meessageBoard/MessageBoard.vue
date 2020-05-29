@@ -1,5 +1,5 @@
 <template>
-  <div class="all-mian-content">
+  <div class="all-main-content">
     我是留言板
   </div>
 </template>

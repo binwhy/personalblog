@@ -1,4 +1,4 @@
-@import "./normalize.css";
+  @import "./normalize.css";
 /*:root 伪类 获取根元素html
 提前定义了一些变量
 我们在使用是var()调用
@@ -27,6 +27,7 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   width: 100vw;
+  background-image: linear-gradient(160deg, #b100ff 20%,#00b3ff 80%);
 }
 
 a {
@@ -67,10 +68,11 @@ a {
   float: right;
 }
 
-.all-mian-content {
+.all-main-content {
   background-color: cyan;
+
   position: absolute;
   left: 24%;
   right: 6%;
-  height: 900px;
+  height: 1900px;
 }
