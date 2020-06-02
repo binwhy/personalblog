@@ -23,7 +23,7 @@
         this.isActive = !this.isActive
       },
       itemClick() {
-        if (this.$route.path !== this.link){
+        if (this.$route.path !== this.link && this.link){
           this.$router.push(this.link)
         }
       }
@@ -33,10 +33,11 @@
 
 <style scoped>
   .main-nav-bar-item {
+    position: relative;
     height: 40px;
     padding: 10px 20px;
   }
   .active {
-    background-color: #666666;
+    background-color:#2E3241;
   }
 </style>

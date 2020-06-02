@@ -72,7 +72,8 @@ a {
   background-color: cyan;
 
   position: absolute;
-  left: 24%;
+  left: 6%;
   right: 6%;
-  height: 1900px;
+  height: 1600px;
+  margin-left: 220px;
 }

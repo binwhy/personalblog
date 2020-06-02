@@ -15,11 +15,14 @@
 <style scoped>
   #tab-bar {
     position: fixed;
+    top: 0;
     left: 6%;
     bottom: 0;
 
+    display: flex;
+    flex-direction: column;
     background-color: #3a3f51;
-    width: 18%;
+    width: 220px;
     height: 100vh;
   }
 </style>
