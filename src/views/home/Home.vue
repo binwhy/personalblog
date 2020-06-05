@@ -14,8 +14,7 @@
             <small>赠人玫瑰，手有余香。</small>
           </div>
           <div class="home-body">
-            <h2>Home {{message}}</h2>
-
+            <home-article/>
           </div>
         </div>
 
@@ -34,15 +33,18 @@
 <script>
   import Scroll from 'components/common/scroll/Scroll';//滚动
   import TopSearch from "components/content/topSearch/TopSearch";
+
+  import HomeArticle from "./childComps/HomeArticle";
   export default {
     name: "Home",
     components: {
       Scroll,
-      TopSearch
+      TopSearch,
+      HomeArticle
     },
     data() {
       return {
-        message: "hi 我的博客-day4"
+        message: "hi 我的博客-day5"
       }
     },
     activated() {
@@ -122,7 +124,7 @@
 
   .home-body {
     padding: 20px;
-    height: 1000px;
+    /*height: 1000px;*/
     background-color: #f1f3f4;
   }
 

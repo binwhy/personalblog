@@ -8,35 +8,55 @@
       </el-input>
     </div>
     <div class="right-part">
-      <el-popover
-        :visible-arrow="false"
-        placement="bottom"
-        title="随心所语"
-        width="320"
-        trigger="click"
-        content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-        <i class="el-icon-chat-line-round" slot="reference"></i>
-      </el-popover>
-      <el-popover
-        :popper-options="{ boundariesElement: 'viewport', removeOnDestroy: true }"
-        :visible-arrow="false"
-        placement="bottom"
-        title="标题"
-        width="200"
-        trigger="click"
-        content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-        <i class="el-icon-user" slot="reference"></i>
-      </el-popover>
+      <i class="el-icon-chat-line-round" @click.stop="commentClick"></i>
+      <top-comment :is-show="commentShow"/>
+      <i class="el-icon-user" @click.stop="loginClick"></i>
+      <top-login :is-show="loginShow"/>
     </div>
   </div>
 </template>
 
 <script>
+  import TopComment from "./TopComment";
+  import TopLogin from "./TopLogin";
   export default {
     name: "TopSearch",
+    components:{
+      TopComment,
+      TopLogin
+    },
     data() {
       return {
         input: '',
+        commentShow:false,
+        loginShow:false
+      }
+    },
+    mounted() {
+      this.globalClick(this.mouseClick);
+    },
+    methods: {
+      //注意在click 后面加上 .stop阻止全局点击事件触发
+      commentClick() {
+        this.commentShow = !this.commentShow
+        if (this.loginShow === true){
+          this.loginShow = false
+        }
+      },
+      mouseClick() {
+        //监听全局点击事件
+        if (this.commentShow === true){
+          this.commentShow = false
+        }
+        if (this.loginShow === true){
+          this.loginShow = false
+        }
+      },
+      loginClick() {
+        this.loginShow = !this.loginShow
+        if (this.commentShow === true){
+          this.commentShow = false
+        }
       }
     }
   }

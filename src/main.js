@@ -11,6 +11,13 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
+// 定义全局点击函数
+Vue.prototype.globalClick = function (callback) {
+  document.getElementById('app').onclick = function () {
+    callback();
+  };
+}
+
 new Vue({
   router,
   store,

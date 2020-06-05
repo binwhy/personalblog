@@ -153,6 +153,7 @@
 
 <style scoped>
   .left-nav-bar {
+    margin-top: 3px;
     display: flex;
     flex-direction:column;
 
