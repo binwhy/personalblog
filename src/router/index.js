@@ -5,6 +5,7 @@ const Home = () => import('../views/home/Home');
 const About = () => import('../views/about/About')
 const Photo = () => import('../views/photo/Photo')
 const MessageBoard = () => import('../views/meessageBoard/MessageBoard')
+const HomeArticleDetail = () => import('../views/home/childComps/HomeArticleDetail')
 
 // 1.安装插件
 Vue.use(VueRouter)
@@ -17,7 +18,13 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: 'article',
+        component:HomeArticleDetail
+      }
+    ]
   },
   {
     path: '/photo',
@@ -30,6 +37,10 @@ const routes = [
   {
     path: '/messageBoard',
     component: MessageBoard
+  },
+  {
+    path: '/article',
+    component:HomeArticleDetail
   }
 ]
 

@@ -3,7 +3,14 @@
     <home-article-item v-for="(item,index) in articles" :key="index" :article="item"/>
 
     <div class="home-next-nav">
-        这是翻页
+      <el-pagination
+        background
+        layout="prev, pager, next"
+        :total="pageSize"
+        :pager-count=5
+        @current-change="pageChange"
+      >
+      </el-pagination>
     </div>
   </div>
 </template>
@@ -58,7 +65,14 @@
             date:'2020 年 06 月 06 日',
             totalComment:16
           },
-        ]
+        ],
+        pageSize:100,
+        currentPage:1
+      }
+    },
+    methods: {
+      pageChange(currentPage) {
+        this.currentPage = currentPage;
       }
     }
   }
@@ -67,6 +81,9 @@
 <style scoped>
   .home-next-nav {
     height: 74px;
-    margin: 30px 0px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
   }
 </style>

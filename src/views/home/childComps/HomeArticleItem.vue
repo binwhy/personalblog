@@ -1,10 +1,9 @@
 <template>
-  <div class="home-article-item" >
+  <div class="home-article-item" @click="articleClick">
     <img class="article-top" :src="article.img" alt="">
     <div class="article-bottom">
       <span class="article-title">{{article.title}}</span>
       <span class="article-summary">{{article.summary}}</span>
-<!--      <div class="article-line"></div>-->
       <div class="article-info">
         <i class="el-icon-s-custom">{{article.author}}</i>
         <i class="el-icon-time">{{article.date}}</i>
@@ -29,6 +28,13 @@
             date:'2020 年 06 月 06 日',
             totalComment:16
           }
+        }
+      }
+    },
+    methods: {
+      articleClick() {
+        if (this.$route.path !== '/article'){
+          this.$router.push('/article')
         }
       }
     }
