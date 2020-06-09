@@ -1,7 +1,7 @@
 <template>
   <tab-bar class="tab-bar">
     <div slot="top" class="tab-bar-top">
-      <img src="~assets/img/mainTabBar/logo.jpg" alt="">
+      <img src="~assets/img/mainTabBar/myblog-logo.png" alt="">
     </div>
 
 
@@ -69,7 +69,7 @@
   }
 
   .tab-bar-top img {
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     height: 29px;
     width:160px;
   }

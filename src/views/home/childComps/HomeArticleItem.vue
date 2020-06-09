@@ -78,7 +78,7 @@
     font-size: 14px;
     word-break:normal;
     /*给底边加阴影*/
-    box-shadow: 0 2px 0  rgba(222,229,231,.45);;
+    box-shadow: 0 2px 0  rgba(222,229,231,.45);
   }
 
   .article-line {

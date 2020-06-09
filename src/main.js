@@ -9,6 +9,12 @@ import 'element-ui/lib/theme-chalk/index.css';
 //安装插件
 Vue.use(ElementUI);
 
+// 引入Markdown 编辑器
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+// 安装插件
+Vue.use(mavonEditor)
+
 Vue.config.productionTip = false
 
 // 定义全局点击函数

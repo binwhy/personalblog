@@ -4,6 +4,9 @@
       <h1>文章详情</h1>
       <small>赠人玫瑰，手有余香。</small>
     </div>
+    <div slot="main-body-content" class="article-edit">
+      <mavon-editor v-model="articleContent"/>
+    </div>
   </main-layout>
 </template>
 
@@ -13,6 +16,11 @@
     name: "HomeArticleDetail",
     components: {
       MainLayout
+    },
+    data() {
+      return {
+        articleContent:''
+      }
     }
   }
 </script>
